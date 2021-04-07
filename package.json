@@ -1,0 +1,36 @@
+{
+    "name": "tesla",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "serve": "cross-env NODE_ENV=development concurrently \"postcss src/style.css -o public/style.css --watch\"  \"live-server ./public\"",
+        "development": "cross-env NODE_ENV=development postcss src/style.css -o public/style.css",
+        "production": "cross-env NODE_ENV=production postcss src/style.css -o public/style.css",
+        "start": "npm run serve",
+        "build-css": "tailwindcss build src/style.css -o public/style.css",
+        "prod": "NODE_ENV=production postcss src/style.css -o public/style.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "boxicons": "^2.0.7",
+        "git": "^0.1.5",
+        "postcss-cli": "^8.3.1",
+        "win-node-env": "^0.4.0"
+    },
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^1.2.0",
+        "@tailwindcss/jit": "^0.1.18",
+        "autoprefixer": "^10.2.5",
+        "concurrently": "^4.1.0",
+        "cross-env": "^5.2.0",
+        "cssnano": "^4.1.10",
+        "live-server": "^1.2.1",
+        "postcss": "^8.2.9",
+        "postcss-cli": "^6.1.2",
+        "tailwindcss": "^2.0.4",
+        "webpack": "^5.24.2"
+    }
+}
